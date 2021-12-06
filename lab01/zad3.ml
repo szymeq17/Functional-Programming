@@ -8,6 +8,7 @@ let take_every s n = fun m -> s n*m;;
 
 let simpleStream n = n;;
 let squareStream n = n * n;;
+let stringStraam n = "A";;
 
 hd simpleStream;;
 (tl simpleStream) 0;;

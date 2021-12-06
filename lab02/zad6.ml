@@ -21,8 +21,8 @@ let rm x xs =
       | y :: ys -> if x <> y then aux x ys (acc @ [y]) else acc @ ys
   in aux x xs [];;
 
-let rec permutationsSelect xs =
+let rec permutations_select xs =
   match xs with
     | [] -> []
     | x :: [] -> [[x]]
-    | xs -> List.fold_left (fun acc x -> acc @ List.map (fun p -> x :: p) (permutations (rm x xs))) [] xs;;
+    | xs -> List.fold_left (fun acc x -> acc @ List.map (fun p -> x :: p) (permutations_select (rm x xs))) [] xs;;
