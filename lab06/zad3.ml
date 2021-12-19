@@ -11,7 +11,8 @@ let and_with_ex pred x y =
   if x && (pred y) then true else raise End
 
 
-let for_all predicate xs = try List.fold_left (and_with_ex predicate) true xs with End -> false;;
+let for_all predicate xs = 
+  try List.fold_left (and_with_ex predicate) true xs with End -> false
 
 let pred x =
   if x mod 2 == 0 then true else false
